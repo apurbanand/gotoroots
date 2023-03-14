@@ -4,4 +4,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/gotoroots/gcr.io/gotoroots/gotoroots:$COMMIT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'gotoroots', '--region=us-central1', '--platform=managed', '--image=gcr.io/gotoroots/gcr.io/gotoroots/gotoroots:ccce2a3181a3ae6550b9ee6b96fa0ba9bc087ebf']
+  args: ['beta', 'run', 'deploy', 'gotoroots', '--region=us-central1', '--platform=managed', '--image=gcr.io/gotoroots/gcr.io/gotoroots/gotoroots:$COMMIT_SHA']
